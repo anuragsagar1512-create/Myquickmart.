@@ -205,10 +205,115 @@
   </div>
 
   <!-- Floating Add Product button -->
-  <button class="fab">
+  <button class="fab" id="openNewProduct">
     <span class="material-icons">add</span>
     <span>PRODUCT</span>
   </button>
+</div>
+
+<!-- NEW PRODUCT PAGE -->
+<div id="newProductPage" class="page">
+  <header class="np-header">
+    <button class="np-back" id="backToCatalogue">
+      <span class="material-icons">arrow_back</span>
+    </button>
+    <h2>New Product</h2>
+    <button class="np-settings">
+      <span class="material-icons">settings</span>
+      <span class="np-settings-text">Settings</span>
+    </button>
+  </header>
+
+  <div class="np-body">
+    <div class="np-card">
+      <label id="addImageBox" class="add-image-box">
+        <input type="file" id="productImageInput" accept="image/*" multiple hidden>
+        <span class="material-icons add-image-icon">add_a_photo</span>
+        <span class="add-image-text">Add Image</span>
+      </label>
+      <p className="np-helper">You can add upto maximum 6 images</p>
+      <p id="imageInfo" class="image-info">No image selected</p>
+      <div id="imagePreview" class="image-preview"></div>
+    </div>
+
+    <div class="np-card">
+      <label class="np-label">Name*</label>
+      <input type="text" class="np-input" placeholder="Product name">
+    </div>
+
+    <div class="np-row">
+      <div class="np-card">
+        <label class="np-label">₹ Sale Price*</label>
+        <input type="number" class="np-input" placeholder="0.00">
+      </div>
+      <div class="np-card">
+        <label class="np-label">₹ MRP</label>
+        <input type="number" class="np-input" placeholder="0.00">
+      </div>
+    </div>
+
+    <div class="np-card">
+      <label class="np-label">Categories</label>
+      <input type="text" class="np-input" placeholder="e.g. Snacks, Beverages">
+    </div>
+
+    <div class="np-row">
+      <div class="np-card">
+        <label class="np-label">Quantity</label>
+        <input type="number" class="np-input" placeholder="0">
+      </div>
+      <div class="np-card">
+        <label class="np-label">Measuring Units</label>
+        <select class="np-input">
+          <option>Pieces</option>
+          <option>Kg</option>
+          <option>Gram</option>
+          <option>Litre</option>
+        </select>
+      </div>
+    </div>
+
+    <h3 class="np-section-title">Variants</h3>
+
+    <div class="np-card">
+      <label class="np-label">Color</label>
+      <input type="text" class="np-input" placeholder="e.g. Red, Blue">
+    </div>
+
+    <div class="np-card">
+      <label class="np-label">Size</label>
+      <input type="text" class="np-input" placeholder="e.g. Small, Large">
+    </div>
+  </div>
+
+  <!-- bottom bar for variants/help/save -->
+  <div class="np-bottom-toolbar">
+    <button class="link-btn">
+      <span class="material-icons">add</span>
+      <span>Variants</span>
+    </button>
+    <button class="icon-circle">
+      <span class="material-icons">help_outline</span>
+    </button>
+  </div>
+
+  <button class="np-save-btn">Save</button>
+
+  <!-- image actions bar -->
+  <div class="image-actions">
+    <button class="image-action-btn" data-action="search">
+      <span class="material-icons">search</span>
+      <span>Search images</span>
+    </button>
+    <button class="image-action-btn" data-action="gallery">
+      <span class="material-icons">photo_library</span>
+      <span>Gallery</span>
+    </button>
+    <button class="image-action-btn" data-action="camera">
+      <span class="material-icons">photo_camera</span>
+      <span>Camera</span>
+    </button>
+  </div>
 </div>
 
 <!-- MANAGE PAGE -->
