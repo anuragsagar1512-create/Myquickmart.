@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Anurag Shop - Dashboard</title>
+  <title>Anurag Shop - Shoopy Style App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -10,11 +10,14 @@
 </head>
 <body>
 
+<!-- HOME PAGE -->
 <div id="homePage" class="page active">
-
   <header class="top">
-    <span class="material-icons">store</span>
-    <h2>Anurag Shop</h2>
+    <span class="material-icons store-icon">storefront</span>
+    <div>
+      <h2>Anurag Shop</h2>
+      <p>Business summary</p>
+    </div>
   </header>
 
   <div class="summary">
@@ -27,8 +30,8 @@
   </div>
 
   <div class="store-link">
-    <p>Your Store Link</p>
-    <a href="#">anurag-shop.store.app</a>
+    <p>Your store link</p>
+    <a href="#">anurag-shop-70016.store.app</a>
   </div>
 
   <h3 class="sub">Business Shortcuts</h3>
@@ -38,40 +41,208 @@
     <div class="s"><span class="material-icons">bar_chart</span> Reports</div>
     <div class="s"><span class="material-icons">inventory</span> Products</div>
   </div>
-
 </div>
 
+<!-- INVOICE PAGE -->
 <div id="invoicePage" class="page">
-  <h2>Invoices</h2><p>All invoice activities...</p>
+  <h2>Invoices</h2>
+  <p>Create and manage invoices here.</p>
 </div>
 
+<!-- ORDERS PAGE -->
 <div id="ordersPage" class="page">
-  <h2>Orders</h2><p>Order listing...</p>
+  <h2>Orders</h2>
+  <p>All customer orders will appear here.</p>
 </div>
 
+<!-- CATALOGUE PAGE -->
 <div id="cataloguePage" class="page">
-  <h2>Catalogue</h2><p>Product list...</p>
+  <header class="page-header">
+    <h2>Catalogue</h2>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tab-row">
+    <button class="cat-tab active" data-tab="productsTab">Products</button>
+    <button class="cat-tab" data-tab="inventoryTab">Inventory</button>
+    <button class="cat-tab" data-tab="categoriesTab">Categories</button>
+  </div>
+
+  <!-- Search -->
+  <div class="search-box">
+    <span class="material-icons">search</span>
+    <input type="text" id="productSearch" placeholder="Search by name or brand">
+  </div>
+
+  <!-- Products View -->
+  <div id="productsTab" class="cat-view active">
+    <div class="product-card" data-name="momos white">
+      <div class="product-main">
+        <img src="https://via.placeholder.com/64" alt="Momos" class="product-img">
+        <div class="product-info">
+          <h3>Momos - White</h3>
+          <div class="price-row">
+            <div>
+              <p class="label">₹ 80.0</p>
+              <p class="sub">Sale Price</p>
+            </div>
+            <div>
+              <p class="label">₹ 100.0</p>
+              <p class="sub">MRP</p>
+            </div>
+          </div>
+        </div>
+        <button class="icon-btn" title="Share">
+          <span class="material-icons">share</span>
+        </button>
+      </div>
+      <div class="product-footer">
+        <span class="online-text">Online</span>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="maggi noodles">
+      <div class="product-main">
+        <img src="https://via.placeholder.com/64" alt="Maggi" class="product-img">
+        <div class="product-info">
+          <h3>Maggi Noodles</h3>
+          <div class="price-row">
+            <div>
+              <p class="label">₹ 12.0</p>
+              <p class="sub">Sale Price</p>
+            </div>
+            <div>
+              <p class="label">₹ 15.0</p>
+              <p class="sub">MRP</p>
+            </div>
+          </div>
+        </div>
+        <button class="icon-btn" title="Share">
+          <span class="material-icons">share</span>
+        </button>
+      </div>
+      <div class="product-footer">
+        <span class="online-text">Online</span>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="cold drink coca cola">
+      <div class="product-main">
+        <img src="https://via.placeholder.com/64" alt="Cold drink" class="product-img">
+        <div class="product-info">
+          <h3>Cold Drink - Cola</h3>
+          <div class="price-row">
+            <div>
+              <p class="label">₹ 35.0</p>
+              <p class="sub">Sale Price</p>
+            </div>
+            <div>
+              <p class="label">₹ 40.0</p>
+              <p class="sub">MRP</p>
+            </div>
+          </div>
+        </div>
+        <button class="icon-btn" title="Share">
+          <span class="material-icons">share</span>
+        </button>
+      </div>
+      <div class="product-footer">
+        <span class="online-text">Online</span>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="biscuits parleg">
+      <div class="product-main">
+        <img src="https://via.placeholder.com/64" alt="Biscuits" class="product-img">
+        <div class="product-info">
+          <h3>Parle-G Biscuits</h3>
+          <div class="price-row">
+            <div>
+              <p class="label">₹ 5.0</p>
+              <p class="sub">Sale Price</p>
+            </div>
+            <div>
+              <p class="label">₹ 5.0</p>
+              <p class="sub">MRP</p>
+            </div>
+          </div>
+        </div>
+        <button class="icon-btn" title="Share">
+          <span class="material-icons">share</span>
+        </button>
+      </div>
+      <div class="product-footer">
+        <span class="online-text">Online</span>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Inventory View -->
+  <div id="inventoryTab" class="cat-view">
+    <p>Inventory view coming soon. You can show stock levels here.</p>
+  </div>
+
+  <!-- Categories View -->
+  <div id="categoriesTab" class="cat-view">
+    <p>Categories view coming soon. You can group items like Snacks, Beverages etc.</p>
+  </div>
+
+  <!-- Floating Add Product button -->
+  <button class="fab">
+    <span class="material-icons">add</span>
+    <span>PRODUCT</span>
+  </button>
 </div>
 
+<!-- MANAGE PAGE -->
 <div id="managePage" class="page">
-  <h2>Manage</h2><p>Store settings...</p>
+  <h2>Manage</h2>
+  <ul class="manage-list">
+    <li><span class="material-icons">store</span> Store details</li>
+    <li><span class="material-icons">payments</span> Payment methods</li>
+    <li><span class="material-icons">local_shipping</span> Delivery settings</li>
+    <li><span class="material-icons">security</span> KYC & verification</li>
+  </ul>
 </div>
 
+<!-- Bottom Navigation -->
 <nav class="bottom-nav">
   <button class="nav-item active" data-page="homePage">
-    <span class="material-icons">home</span><span>Home</span>
+    <span class="material-icons">home</span>
+    <span>Home</span>
   </button>
   <button class="nav-item" data-page="invoicePage">
-    <span class="material-icons">receipt_long</span><span>Invoice</span>
+    <span class="material-icons">receipt_long</span>
+    <span>Invoice</span>
   </button>
   <button class="nav-item" data-page="ordersPage">
-    <span class="material-icons">shopping_cart</span><span>Orders</span>
+    <span class="material-icons">shopping_cart</span>
+    <span>Orders</span>
   </button>
   <button class="nav-item" data-page="cataloguePage">
-    <span class="material-icons">inventory_2</span><span>Catalogue</span>
+    <span class="material-icons">inventory_2</span>
+    <span>Catalogue</span>
   </button>
   <button class="nav-item" data-page="managePage">
-    <span class="material-icons">settings</span><span>Manage</span>
+    <span class="material-icons">settings</span>
+    <span>Manage</span>
   </button>
 </nav>
 
