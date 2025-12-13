@@ -2,35 +2,31 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>My Quick Mart</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>माय क्विक मार्ट</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-
-<header class="top">
-  <div>
-    <h1>🛒 My Quick Mart</h1>
-    <p>Delhi | 📍 Location required</p>
-  </div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">My Account</a>
-    <a href="#">My Orders</a>
-    <a href="#">Contact</a>
-  </nav>
+<header class="header">
+<h1>🛒 माय क्विक मार्ट</h1>
+<button class="location-btn" onclick="getLocation()">📍 <span id="loc">लोकेशन दें</span></button>
 </header>
 
-<section id="products" class="grid"></section>
+<section class="grid" id="products">लोड हो रहा है...</section>
 
-<section class="checkout">
-<h3>Checkout (COD)</h3>
+<section class="checkout-container">
+<div class="checkout-box">
+<div id="cart-summary">कार्ट में: 0 आइटम्स | कुल: ₹0</div>
 <input id="name" placeholder="नाम">
 <input id="phone" placeholder="मोबाइल">
-<textarea id="address" placeholder="पूरा पता"></textarea>
-<button onclick="placeOrder()">Order on WhatsApp</button>
+<textarea id="address" placeholder="पता"></textarea>
+<button onclick="placeOrder()" class="order-btn">WhatsApp ऑर्डर</button>
+</div>
 </section>
+
+<div id="toast"></div>
 
 <script src="supabase.js"></script>
 <script src="script.js"></script>
