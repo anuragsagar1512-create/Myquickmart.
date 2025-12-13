@@ -1,8 +1,6 @@
 async function load(){
 const {data}=await supabase.from("orders").select("*").order("created_at",{ascending:false});
-const box=document.getElementById("orders");
-data.forEach(o=>{
-box.innerHTML+=`<p><b>${o.customer_name}</b> | ₹${o.total}</p>`;
-});
+const o=document.getElementById("o");
+data.forEach(x=>{o.innerHTML+=`<p>${x.customer_name} - ₹${x.total}</p>`});
 }
 load();

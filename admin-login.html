@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h2>🔐 Admin Login</h2>
-<input id="p" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
+<html><body>
+<h2>Admin Login</h2>
+<input id="p" type="password">
+<button onclick="l()">Login</button>
 <script>
-function login(){
-if(p.value==="admin123"){
-localStorage.setItem("admin","yes");
-location.href="admin.html";
-}else alert("Wrong Password");
+function l(){
+if(p.value==='admin123'){
+localStorage.setItem('admin','yes');
+location.href='admin.html';
+}else alert('Wrong');
 }
 </script>
-</body>
-</html>
+</body></html>

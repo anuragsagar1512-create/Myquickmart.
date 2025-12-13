@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html><body>
 <script>
-if(localStorage.getItem("admin")!=="yes"){
-location.href="admin-login.html";
-}
+if(localStorage.getItem('admin')!=='yes')location.href='admin-login.html';
 </script>
-<h2>📦 Orders</h2>
-<div id="orders"></div>
+<h2>Orders</h2>
+<div id="o"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase.js"></script>
 <script src="admin.js"></script>
-</body>
-</html>
+</body></html>
