@@ -1,16 +1,28 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <title>My Quick Mart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-<header>🛒 My Quick Mart</header>
-<div id="products"></div>
-<a href="checkout.html" class="cart">Checkout</a>
-<script src="app.js"></script>
+
+<header>
+<h1>🛒 My Quick Mart</h1>
+<p>Delhi | 📞 7042504514</p>
+</header>
+
+<section id="products"></section>
+
+<h3>🧾 Order Details</h3>
+<input id="name" placeholder="आपका नाम">
+<input id="phone" placeholder="मोबाइल नंबर">
+<textarea id="address" placeholder="पूरा पता"></textarea>
+<button onclick="placeOrder()">Order Now (COD)</button>
+
+<script src="supabase.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

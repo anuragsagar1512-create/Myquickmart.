@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>Admin Panel</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="admin.css">
-</head>
 <body>
-<header class="header">Admin Panel</header>
-<div class="box">
-<h3>Add Product</h3>
-<input placeholder="Product name"><br><br>
-<input placeholder="Price"><br><br>
-<button>Add</button>
-</div>
+<script>
+if(localStorage.getItem("admin")!=="yes"){
+location.href="admin-login.html";
+}
+</script>
+<h2>📦 Orders</h2>
+<div id="orders"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="admin.js"></script>
 </body>
 </html>
